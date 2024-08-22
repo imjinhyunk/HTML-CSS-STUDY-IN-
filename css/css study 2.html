@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <style>
+        
+        h1{
+        글의 위치를 변경하고 싶으면 text-align속성을 통해 중간 왼쪽 오른쪽을 설정할수 있다.
+            text-align: center;
+            font-size: 100px;
+        }
+        h2{
+            text-align: left;
+            letter-spacing: 1px;
+        }
+        h3{
+            text-align: right;
+        }
+    </style>
+    <h1>중앙</h1>
+    <h2>왼쪽</h2>
+    <h3>오른쪽</h3> -->
+    <!--
+    <style>
+        .b-100{
+            font-weight: 100;
+        }
+        .b-200{
+            font-weight: 200;
+        }
+        .b-300{
+            font-weight: 300;
+        }
+        .b-400{
+            font-weight: 400;
+        }
+        .b-500{
+            font-weight: 500;
+        }
+        .b-600{
+            font-weight: 600;
+        }
+        .b-700{
+            font-weight: 700;
+        }
+        .b-800{
+            font-weight: 800;
+        }
+        .b-900{
+            font-weight: 900;
+        }
+    </style>
+    <div class="b-100">font-weight 100</div>
+    <div class="b-200">font-weight 200</div>
+    <div class="b-300">font-weight 300</div>
+    <div class="b-400">font-weight 400</div>
+    <div class="b-500">font-weight 500</div>
+    <div class="b-600">font-weight 600</div>
+    <div class="b-700">font-weight 700</div>
+    <div class="b-800">font-weight 800</div>
+    <div class="b-900">font-weight 900</div>
+    -->
+
+    <!-- 텍스트의 굵기를 정하려면 font-weight속성을 쓰면 된다. -->
+     <!--
+    <style>
+        h1{
+            font-family: 궁서;
+            font-family: 없는 폰트, sans-serif; /*브라우저가 폰트를 찾는데 먼저 앞에 있는 폰트를 찾고 그 폰트가 없으면 다음 폰트를 적용합니다.
+            만약 두 폰트 모두 브라우저가 지원하지 않는 글꼴이라면 마지막 대안으로 사용되는 기본폰트를 사용합니다.*/
+        }
+    </style>
+    <h1>진지한 궁서체</h1>
+    <h1>없는 폰트</h1>
+    -->
+    <!--
+    <style>
+        이 방법은 폰트를 다운받고 파일에 넣음으로써 사용가능한 방법입니다.
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 200;
+            src: url('/fonts/MaruBuri-ExtraLight.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 300;
+            src: url('/fonts/MaruBuri-Light.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            src: url('/fonts/MaruBuri-Regular.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 600;
+            src: url('/fonts/MaruBuri-SemiBold.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 700;
+            src: url('/fonts/MaruBuri-Bold.ttf');
+        }
+       div{
+        font-family: maru-buri, sans-serif;
+       }
+       span{
+        font-family: maru-buri, sans-serif;
+        font-weight: 700;
+       }
+    </style>
+    <div>평범한 마루부리</div>
+    <span>굵은 마루부리</span>
+-->
+    <!--
+    이 방법은 폰트 파일을 따로 다운 안받고 웹 폰트를 이용하여 폰트를 적용시킨 방법입니다
+    <style>
+        @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+       div{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+    <div>div태그만 본고딕으로 적용</div>
+    <span>span은 적용이 안되었습니다</span>
+    -->
+    <!--
+    <style>
+        /* <ol>, <ul> 태그 모두 다 타입을 숫자로 바꾸기 */
+        ol, ul{
+            list-style-type: decimal;
+        }
+    </style>
+    <ul>
+        <li>순서가</li>
+        <li>없는</li>
+        <li>리스트</li>
+    </ul>
+    <ol>
+        <li>순서가</li>
+        <li>있는</li>
+        <li>리스트</li>
+    </ol>
+    -->
+    <!--
+        <style>
+            ol{
+                list-style-type: '글자';
+            }
+            ul{
+                list-style-type: '😀';
+            }
+        </style>
+        <ul>
+            <li>순서가</li>
+            <li>없는</li>
+            <li>리스트</li>
+        </ul>
+        <ol>
+            <li>순서가</li>
+            <li>있는</li>
+            <li>리스트</li>
+        </ol>
+    -->
+        <!--
+        <style>
+            ol{
+                list-style-image: linear-gradient(to left bottom, red, blue);
+            }
+        </style>
+        <ol>
+            <li>그레이디언트</li>
+            <li>리스트</li>
+        </ol>
+    -->
+        <!--
+        <style>
+            h1{
+                background: beige;
+            }
+            h2{
+                width: 50%;
+                background: aquamarine;
+            }
+            h3{
+                width: 1000px;
+                background-color: antiquewhite;
+            }
+        </style>
+        <h1>기본적으로는 100%입니다.</h1>
+        <h2>50%니까 반만 차지합니다.</h2>
+        <h3>1000px만 차지합니다.</h3>
+        -->
+        <!--
+        <style>
+            h3{
+                max-width: 700px;
+                margin: auto; /*max-width:최대폭
+                해상도가 사용자마다 다르기 때문에 자동으로 해당 컴퓨터의 해상도에
+                맞춰주는 기능이다 ,컨테이너를 중심으로 오게 하기 위한 겉 여백*/
+                background-color: antiquewhite;
+            }
+        </style>
+        <h3>중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠
+        </h3>
+        -->
+        <!--
+        <style>
+            h3{
+                min-width: 400px;
+                max-width: 700px;
+                margin: auto;
+                background-color: antiquewhite;
+            }
+        </style>
+        <h3>
+            중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠
+        </h3>
+    -->
+        <!--
+        <style>
+            h3{
+                background-color: yellow;
+                max-height: 60px; /*요소의 높이가 제한되어 있어 제한 된 높이를 벗어나면 적용된 배경색이 적용이 안됩니다.*/
+                overflow: hidden; /*이러한 위 요소를 해결하기 위해 overflow속성을 사용하면 제한된 높이를 벗어나는 글자를 잘라주어 설정한 요소의 높이만 보이게 해줍니다.*/
+            }
+        </style>
+        <h3>
+            중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠
+        </h3>
+    -->
+        <!-- 
+        <style>
+            div{
+                height: 50vh;/* 화면 전체의 반(50%)*/
+                background-color: bisque;
+                min-height: 64px;
+            }
+            h3{
+                background-color: antiquewhite;
+                height: 50%;
+                
+                overflow: hidden;
+            }
+        </style>
+        <div>
+            <h3>멋진 콘텐츠</h3>
+        </div>
+         -->
+        <!-- 
+        <style>
+            div{
+                width: 40px;
+                height: 40px;
+                background-color: antiquewhite;
+                overflow: hidden; /*글자나 백그라운드가 벗어나면 숨긴다*/
+                /*overflow: visible; 벗어나도 보인다*/
+            }
+            h1{
+                width: 10px;
+                height: 100px; /*높이는 부모를 초과하여 벗어난다.*/
+                background-color: aquamarine;
+                
+            }
+        </style>
+        <div>
+            <h1> </h1>
+        </div>
+        <br>
+        <div>텍스트 텍스트!</div>
+         -->
+        <!--
+         <style>
+            h2{
+                width: 18px;
+                overflow: hidden;
+            }
+            h1{
+                height: 24px;
+                overflow: hidden;
+            }
+         </style>
+         <div>가로 세로로 잘린 텍스트</div>
+         <h1>가로</h1>
+         <h2>세로</h2>
+          -->
+         <!--
+          <style>
+            h1{
+                overflow-y: scroll; /*세로축 y축만 스크롤 적용*/
+                width: 100px;
+                height: 100px;
+            }
+            h2{
+                overflow: scroll;
+                white-space: nowrap; /* white-space: 글꼴 공백처리*/
+                width: 100px;
+                height: 100px;
+            }
+          </style>
+          <div>가로 세로로 스크롤이 보이는 텍스트</div>
+          <h1>
+            안녕하세요!<br>
+            멋진 콘텐츠죠!<br>
+            세 번째 줄입니다
+          </h1>
+          <h2>
+            안녕하세요!<br>
+            멋진 콘텐츠죠!<br>
+            세 번째 줄입니다
+          </h2>
+        -->
+          <!--
+          <style>
+            div{
+                width: 50%;
+                aspect-ratio: 1; /*가로세로의 비율은 1, 즉 같다.*/
+                background-color: beige;
+            }
+          </style>
+          <div> </div>
+        -->
+        <style>
+            div{
+                width: 50%;
+                aspect-ratio: 1920/1080; /*가로세로 1920 * 1080, Full HD모니터 비율*/
+                background-color: beige;
+            }
+          </style>
+          <div> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
