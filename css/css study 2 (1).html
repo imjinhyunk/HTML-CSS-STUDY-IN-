@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--이것은 핸드폰ui와 pc ui에 차이가 있기에 이를
+    보안하고자 만든 것이다-->
+
+    
+    <title>CSS study</title>
+   
+</head>
+<body>
+    
+    <!-- <style>
+        
+        h1{
+        글의 위치를 변경하고 싶으면 text-align속성을 통해 중간 왼쪽 오른쪽을 설정할수 있다.
+            text-align: center;
+            font-size: 100px;
+        }
+        h2{
+            text-align: left;
+            letter-spacing: 1px;
+        }
+        h3{
+            text-align: right;
+        }
+    </style>
+    <h1>중앙</h1>
+    <h2>왼쪽</h2>
+    <h3>오른쪽</h3> -->
+    <!--
+    <style>
+        .b-100{
+            font-weight: 100;
+        }
+        .b-200{
+            font-weight: 200;
+        }
+        .b-300{
+            font-weight: 300;
+        }
+        .b-400{
+            font-weight: 400;
+        }
+        .b-500{
+            font-weight: 500;
+        }
+        .b-600{
+            font-weight: 600;
+        }
+        .b-700{
+            font-weight: 700;
+        }
+        .b-800{
+            font-weight: 800;
+        }
+        .b-900{
+            font-weight: 900;
+        }
+    </style>
+    <div class="b-100">font-weight 100</div>
+    <div class="b-200">font-weight 200</div>
+    <div class="b-300">font-weight 300</div>
+    <div class="b-400">font-weight 400</div>
+    <div class="b-500">font-weight 500</div>
+    <div class="b-600">font-weight 600</div>
+    <div class="b-700">font-weight 700</div>
+    <div class="b-800">font-weight 800</div>
+    <div class="b-900">font-weight 900</div>
+    -->
+
+    <!-- 텍스트의 굵기를 정하려면 font-weight속성을 쓰면 된다. -->
+     <!--
+    <style>
+        h1{
+            font-family: 궁서;
+            font-family: 없는 폰트, sans-serif; /*브라우저가 폰트를 찾는데 먼저 앞에 있는 폰트를 찾고 그 폰트가 없으면 다음 폰트를 적용합니다.
+            만약 두 폰트 모두 브라우저가 지원하지 않는 글꼴이라면 마지막 대안으로 사용되는 기본폰트를 사용합니다.*/
+        }
+    </style>
+    <h1>진지한 궁서체</h1>
+    <h1>없는 폰트</h1>
+    -->
+    <!--
+    <style>
+        이 방법은 폰트를 다운받고 파일에 넣음으로써 사용가능한 방법입니다.
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 200;
+            src: url('/fonts/MaruBuri-ExtraLight.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 300;
+            src: url('/fonts/MaruBuri-Light.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            src: url('/fonts/MaruBuri-Regular.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 600;
+            src: url('/fonts/MaruBuri-SemiBold.ttf');
+        }
+        @font-face {
+            font-family: maru-buri;
+            font-weight: 700;
+            src: url('/fonts/MaruBuri-Bold.ttf');
+        }
+       div{
+        font-family: maru-buri, sans-serif;
+       }
+       span{
+        font-family: maru-buri, sans-serif;
+        font-weight: 700;
+       }
+    </style>
+    <div>평범한 마루부리</div>
+    <span>굵은 마루부리</span>
+-->
+    <!--
+    이 방법은 폰트 파일을 따로 다운 안받고 웹 폰트를 이용하여 폰트를 적용시킨 방법입니다
+    <style>
+        @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+       div{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+    <div>div태그만 본고딕으로 적용</div>
+    <span>span은 적용이 안되었습니다</span>
+    -->
+    <!--
+    <style>
+        /* <ol>, <ul> 태그 모두 다 타입을 숫자로 바꾸기 */
+        ol, ul{
+            list-style-type: decimal;
+        }
+    </style>
+    <ul>
+        <li>순서가</li>
+        <li>없는</li>
+        <li>리스트</li>
+    </ul>
+    <ol>
+        <li>순서가</li>
+        <li>있는</li>
+        <li>리스트</li>
+    </ol>
+    -->
+    <!--
+        <style>
+            ol{
+                list-style-type: '글자';
+            }
+            ul{
+                list-style-type: '😀';
+            }
+        </style>
+        <ul>
+            <li>순서가</li>
+            <li>없는</li>
+            <li>리스트</li>
+        </ul>
+        <ol>
+            <li>순서가</li>
+            <li>있는</li>
+            <li>리스트</li>
+        </ol>
+    -->
+        <!--
+        <style>
+            ol{
+                list-style-image: linear-gradient(to left bottom, red, blue);
+            }
+        </style>
+        <ol>
+            <li>그레이디언트</li>
+            <li>리스트</li>
+        </ol>
+    -->
+        <!--
+        <style>
+            h1{
+                background: beige;
+            }
+            h2{
+                width: 50%;
+                background: aquamarine;
+            }
+            h3{
+                width: 1000px;
+                background-color: antiquewhite;
+            }
+        </style>
+        <h1>기본적으로는 100%입니다.</h1>
+        <h2>50%니까 반만 차지합니다.</h2>
+        <h3>1000px만 차지합니다.</h3>
+        -->
+        <!--
+        <style>
+            h3{
+                max-width: 700px;
+                margin: auto; /*max-width:최대폭
+                해상도가 사용자마다 다르기 때문에 자동으로 해당 컴퓨터의 해상도에
+                맞춰주는 기능이다 ,컨테이너를 중심으로 오게 하기 위한 겉 여백*/
+                background-color: antiquewhite;
+            }
+        </style>
+        <h3>중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠
+        </h3>
+        -->
+        <!--
+        <style>
+            h3{
+                min-width: 400px;
+                max-width: 700px;
+                margin: auto;
+                background-color: antiquewhite;
+            }
+        </style>
+        <h3>
+            중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠
+        </h3>
+    -->
+        <!--
+        <style>
+            h3{
+                background-color: yellow;
+                max-height: 60px; /*요소의 높이가 제한되어 있어 제한 된 높이를 벗어나면 적용된 배경색이 적용이 안됩니다.*/
+                overflow: hidden; /*이러한 위 요소를 해결하기 위해 overflow속성을 사용하면 제한된 높이를 벗어나는 글자를 잘라주어 설정한 요소의 높이만 보이게 해줍니다.*/
+            }
+        </style>
+        <h3>
+            중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 중간 컨텐츠 
+            중간 컨텐츠중간 컨텐츠 중간 컨텐츠
+        </h3>
+    -->
+        <!-- 
+        <style>
+            div{
+                height: 50vh;/* 화면 전체의 반(50%)*/
+                background-color: bisque;
+                min-height: 64px;
+            }
+            h3{
+                background-color: antiquewhite;
+                height: 50%;
+                
+                overflow: hidden;
+            }
+        </style>
+        <div>
+            <h3>멋진 콘텐츠</h3>
+        </div>
+         -->
+        <!-- 
+        <style>
+            div{
+                width: 40px;
+                height: 40px;
+                background-color: antiquewhite;
+                overflow: hidden; /*글자나 백그라운드가 벗어나면 숨긴다*/
+                /*overflow: visible; 벗어나도 보인다*/
+            }
+            h1{
+                width: 10px;
+                height: 100px; /*높이는 부모를 초과하여 벗어난다.*/
+                background-color: aquamarine;
+                
+            }
+        </style>
+        <div>
+            <h1> </h1>
+        </div>
+        <br>
+        <div>텍스트 텍스트!</div>
+         -->
+        <!--
+         <style>
+            h2{
+                width: 18px;
+                overflow: hidden;
+            }
+            h1{
+                height: 24px;
+                overflow: hidden;
+            }
+         </style>
+         <div>가로 세로로 잘린 텍스트</div>
+         <h1>가로</h1>
+         <h2>세로</h2>
+          -->
+         <!--
+          <style>
+            h1{
+                overflow-y: scroll; /*세로축 y축만 스크롤 적용*/
+                width: 100px;
+                height: 100px;
+            }
+            h2{
+                overflow: scroll;
+                white-space: nowrap; /* white-space: 글꼴 공백처리*/
+                width: 100px;
+                height: 100px;
+            }
+          </style>
+          <div>가로 세로로 스크롤이 보이는 텍스트</div>
+          <h1>
+            안녕하세요!<br>
+            멋진 콘텐츠죠!<br>
+            세 번째 줄입니다
+          </h1>
+          <h2>
+            안녕하세요!<br>
+            멋진 콘텐츠죠!<br>
+            세 번째 줄입니다
+          </h2>
+        -->
+          <!--
+          <style>
+            div{
+                width: 50%;
+                aspect-ratio: 1; /*가로세로의 비율은 1, 즉 같다.*/
+                background-color: beige;
+            }
+          </style>
+          <div> </div>
+        -->
+          <!--
+        <style>
+            div{
+                width: 50%;
+                aspect-ratio: 1920/1080; /*aspect-ratio는 비율을 자동으로 설정해주는 속성이다 가로세로 1920 * 1080, Full HD모니터 비율*/
+                background-color: beige;
+            }
+          </style>
+          <div> </div>
+        -->
+          <!--
+          <style>
+            div{
+                width: 150px;
+                height: 150px;
+                background-image: url(/1299642.svg), url(/OIP.jpg); /*먼저 오는 이미지가 앞으로, svg는 이미지 배경이 투명색이므로 jpg 배경이 있는 배경을 그대로 보여준다.*/
+                background-color: antiquewhite;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                /*background-image: url(/85065616\ -\ 복사본.png);*/
+                /*background-image: url(/OIP.jpg);*/             
+            }
+          </style>
+          <div>
+            정말로 배경에 엄준식이 생겼어요!<br>
+            그래서 겹치기도 합니다.<br>
+            너무 신기하네요 엄
+          </div>
+        -->
+          <!--
+          <style>
+            div{
+                width: 150px;
+                height: 150px;
+                background-image: linear-gradient(red,blue);
+            }
+          </style>
+          <div> </div>
+        -->
+          <!--
+          <style>
+            div{
+                width: 300px;
+                height: 300px;
+                background-image: url(/1299642.svg);
+                background-repeat: no-repeat; /*배경이미지 반복 안함*/
+            }  
+            </style>
+            <div> </div>
+        -->
+            <!--
+            <style>
+                h1{
+                    width: 500px;
+                    height: 300px;
+                    background-image: url(/1299642.svg);
+                    background-repeat: repeat-x;/*가로만 반복*/
+                    background-position: center;
+                    background-size: contain;
+                }
+                h2{
+                    width: 500px;
+                    height: 300px;
+                    background-image: url(/1299642.svg);
+                    background-position: center;
+                    background-repeat: repeat-y;/*세로만 반복*/
+                    background-size: contain;
+                }
+            </style>
+            <h1> </h1>
+           
+            <h2> </h2>
+        -->
+            <!--
+        <style>
+            div{
+                width: 500px;
+                height: 300px;
+                background-image: url(/1299642.svg);
+                background-repeat: repeat no-repeat ; /*가로 반복, 세로 미반복:  첫번째 속성값은 x축, 2번째 속성값은 y값을 나타낸다.*/
+                background-size: contain;
+            }  
+            </style>
+            <div> </div>
+        -->
+            <!--
+        <style>
+            div{
+                width: 500px;
+                height: 300px;
+                background-image: url(/OIP.jpg);
+                /*background-size: contain; 배경의 이미지가 요소에 딱 맞으며 비율이 유지되도록 설정*/
+                /*background-size: 100% 100%;배경 이미지가 요소에 딱 맞도록 설정*/
+                background-size: cover; /*배경 이미지가 잘리더라도 요소를 가득 채우게 설정*/
+            }  
+            </style>
+            <div> </div>
+        -->
+            <!--  
+        <style>
+            div{
+                width: 500px;
+                height: 500px;
+                background-image: url(/1299642.svg);
+                background-repeat: no-repeat;
+                background-position: 20%, 10%; /*가로 20% 세로 10% 위치에 배치*/
+                background-color: antiquewhite;
+
+
+                /*background-size: cover; /*배경 이미지가 잘리더라도 요소를 가득 채우게 설정
+                background-position: center; /* cover속성으로 이미지가 잘렸을때를 위해 포지션 을 사용하여 이미지를 중심으로 끌어와준다.*/
+            }  
+            </style>
+            <div> </div>
+        -->
+            <!--
+        <style>
+            div{
+                width: 500px;
+                height: 300px;
+                border: solid;
+                /*border: red solid 1px; /*빨간색 실선의 1px 테두리*/
+                border-width: 10px; /*폭 10px 테두리, 재정의되어 위의 1px는 무시*/
+                border-color: #FF0000;
+
+            }
+        </style>
+        <div>두꺼운 테두리! </div>
+    -->
+        <!--
+        <style>
+            div{
+                width: 500px;
+                height: 300px;
+                border: solid;
+                border-color: rgba(255,0,0,0.3);
+                background-color: yellow;
+                border-width: 10px;
+            }
+        </style>
+        <div>두꺼운 테두리!
+            빨강과 노랑이 섞여서 주황이 되었다!
+        </div>
+    -->
+        <!--
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                border-style: outset; /*실선 테두리 튀어나오도록*/
+                border-color: red;
+                border-width: 10px;
+                background-color: red;
+            }
+        </style>
+        <div> </div>
+    -->
+        <!-- 
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border-style: solid; /*실선 테두리 튀어나오도록*/
+            /*그레디언트 테두리*/
+            border-image: linear-gradient(0deg, rgba(131,58,180,1) 0%,
+            rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%) 1;
+            border-width: 10px;
+        }
+    </style>
+    <div> </div>
+-->
+    <!--
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        border-top: green 10px dotted; /*초록 점 10px 테두리*/
+        border-left: red 10px solid; /*빨간 실선 10px 테두리*/
+        border-right: yellow 10px dashed; /*노란 점선 10px 테두리*/
+    }
+</style>
+<div> </div>
+    -->
+<!--
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            /*border-radius: 50%; /*꼭짓점 둥근 정도가 50% 넘어가면 원*/
+            border-top-left-radius: 50%; /* 왼쪽 위의 꼭짓점은 50% 둥글게*/
+            border-top-right-radius: 50%; /* 오른쪽 위의 꼭짓점은 50% 둥글게*/
+            border-bottom-left-radius: 50%; /* 왼쪽 아래의 꼭짓점은 50% 둥글게*/
+            border-bottom-right-radius: 50%; /* 오른쪽 아래의 꼭짓점은 50% 둥글게*/
+            overflow: hidden; /*요소 밖으로 텍스트가 나와있어서 overflow hidden을 사용하여 요소 밖으로 컨텐츠가 나가면 숨겨지도록 설정했다.*/
+            /*border-radius: 16px; /*꼭짓점 둥근 정도 16px*/
+        }
+    </style>
+    <div>안녕하세요!</div>
+-->
+<!-- margin 속성은 요소와 요소 사이에 공간을 주기 위해 사용하는 속성으로, 레이아웃 디자인과 정렬 작업에서 필수적입니다. -->
+    <!--
+    <style>
+        h1{ /* h1은 기본적으로 겉 여백이 있음*/
+            margin: 0;
+            background-color: aqua;
+        }
+        div{
+            margin-top: 16px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <h1>기존 여백이 제거되었습니다.</h1>
+    <div>위 요소랑 16px 만큼 떨어질래요!</div>
+-->
+    <!--
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin-left: 16px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <div>왼쪽에 겉 여백 추가!</div>
+    -->
+    <!--
+    <style>
+        div{
+            background-color: antiquewhite;
+        }
+        h1{
+            width: 100px;
+            height: 100px;
+            margin: 100px 8px 32px 64px; /*시계 방향으로 상단, 오른쪽, 하단, 왼쪽 지정*/
+            background-color: aquamarine;
+        }
+    </style>
+    <div>
+        H1 전
+        <h1> </h1>
+        H1 후
+    </div>
+    
+    -->
+    <!--
+    <style>
+        div{
+            background-color: antiquewhite;
+        }
+        h1{
+            width: 100px;
+            height: 100px;
+            margin: 100px 8px 32px; /*상단(100px), 좌우(8px 씩), 하단(32px)*/
+            background-color: aquamarine
+        }
+    </style>
+    <div>
+        H1 전
+        <h1> </h1>
+        H1 후
+    </div>
+-->
+   
+<!--
+<style>
+    div{
+        background-color: antiquewhite;
+    }
+    h1{
+        width: 100px;
+        height: 100px;
+        margin: 100px 32px; /*상하 100px씩, 좌우 32px씩*/
+        background-color: aquamarine;
+    }
+</style>
+<div>
+    H1 전
+    <h1> </h1>
+    H1 후
+</div>
+-->
+<!--
+<style>
+    div{
+        background-color: antiquewhite;
+       
+    }
+    h1{
+        width: 100px;
+        height: 100px;
+        margin: auto; /*atuo일 경우 최대한 떨어지려고 함.*/
+        background-color: aquamarine;
+    }
+</style>
+<div>
+    <h1> </h1>
+</div>
+-->
+ <!--
+<style>
+    div{
+        background-color: antiquewhite;
+        height: 300px;
+    }
+    h1{
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        background-color: aquamarine;
+    }
+</style>
+<div>
+    <h1> </h1>
+</div> /*HTML 문서의 요소들은 위에서부터 쌓이는 속성이 있기 때문에 상단과 하단의 겉 여백은
+auto로 설정 되어도 요소를 중심으로 옮기지 않습니다.*/
+--> 
+<!-- 
+<style>
+    h1{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        background-color: aquamarine;
+    }
+    h2{
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+        /*margin-top: 20px;  만약 마주보고 잇는 두 겉 여백의 크기가 다르면 더 큰 여백의 값이 적용된다*/ 
+        background-color: antiquewhite;
+    }
+</style>
+<h1> </h1>
+둘은 20px이 아닌 10px만큼 떨어져요!
+ <h2> </h2>
+-->
+ <!--
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            padding: 16px; /*속 여백 지정*/
+        }
+    </style>
+    <div>
+        <span>span은 아무 스타일도 없습니다.</span>
+    </div>
+-->
+    <!--
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        padding-left: 16px; /*왼쪽 속 여백 지정*/
+    }
+</style>
+<div>
+    <span>왼쪽에 속 여백이 있습니다.</span>
+</div>
+-->
+<!--
+    <style>
+        h1{
+            margin: 0;
+            padding-bottom: 10px;
+            background-color: aquamarine;
+        }
+        h2{
+            margin: 0;
+            padding-top: 20px;
+            background-color: antiquewhite;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <h1>
+        <div> </div>
+    </h1>
+        한쪽은 10px 한쪽은 20px 속 여백으로 인한 두 요소의 거리는 총 30px bottom과 top 여백을 합쳐서 30
+    <h2>
+        <div> </div>
+    </h2>
+-->
+    <!--
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            padding: 16px;
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+        h1{
+            width: 150px;
+            height: 150px;
+            padding: 16px;
+            background-color: beige;
+            font-size: 16px;
+            font-weight: normal;
+        }
+    </style>
+    <div>
+        박스 사이징 border-box<br>
+        padding까지 폭과 높이에 포함
+    </div>
+    <h1>박스 사이징 기본값(content-box)<br>
+    padding이 폭과 높이에 합산
+    </h1>
+-->
+    <!--
+    <style>
+        /*모든 요소 대상으로 box-sizing 설정*/
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            width: 150px;
+            height: 150px;
+            padding: 16px;
+            background-color: aquamarine;
+        }
+        h1{
+            width: 150px;
+            height: 150px;
+            padding: 32px;
+            background-color: beige;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+    </style>
+    <div>서로 다른 태그도</div>
+    <h1>width와 height가 바로 적용된다!</h1>
+-->
+    <!--
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            box-shadow: 16px 16px darkblue;
+        }
+    </style>
+    <div>오른쪽 아랭 존재 하는 그림자</div>
+-->
+    <!-- 
+    <style>
+        div{
+            width: 150px;
+        }
+    
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            box-shadow: 16px 16px 8px rgba(0,0,0,0.5);
+            /*box-shadow: 16px 16px rgba(0, 0, 0, 0.5);*/
+    }
+    </style>
+    <div>8px만큼 흐려진 그림자</div>
+-->
+    <!-- 
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            margin: 32px; /*그림자가 모두 보이도록 겉 여백 추가*/
+            background-color: aquamarine;
+            box-shadow:16px 16px 8px 32px rgba(0,0,0,0.5) ;
+        }
+    </style>
+    <div>32px만큼 커진 그림자</div>
+-->
+    <!--
+<style>
+    div{
+        width: 150px;
+        height: 150px;
+        margin: 64px; /*그림자가 모두 보이도록 겉 여백 추가*/
+        background-color: aquamarine;
+        box-shadow: inset 16px 16px 8px 32px rgba(0,0,0,0.5);
+
+        /*투명한 검은색 그림자와 빨간색 그림자*/
+        /*box-shadow:16px 16px 8px 32px rgba(0,0,0,0.5), 0px 0px 4px 32px red ;*/
+    }
+</style>
+<div>내부 그림자</div>
+-->
+<!-- 
+    <style>
+        *{ /* ("*")를 쓴 선택자는 전체 선택자라는 것이다 이 선택자를 쓰면 모든 태그가 설정한 속성이 적용되어진다*/
+            font-size: 20px;
+            color: blueviolet;
+        }
+    </style>
+    <div>
+        모든 태그가 일괄 적용
+    </div>
+    <h1>
+        h1 태그도 div 태그와 동일한 스타일로 적용
+    </h1>
+    아무것도 없어 보이더라도 결국 html, body 태그 안에 있으므로 적용
+    <input type="password">
+-->
+    <!-- 
+    <div id="box">
+        내 아이디는 box!
+    </div>
+    <div id="Box">
+        내 아이디는 Box!
+        대소문자 구분을 한다!
+    </div>
+-->
+    <!-- 
+    <style>     
+        /*아이디 선택자*/
+        #blueBox {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+        }
+        #redBox {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <div id="blueBox">Blue Box</div>
+    <br>
+    <div id="redBox">Red Box</div>
+-->
+    <!-- 
+    <style>
+        /*클래스 선택자 class는 만들고 싶은 클래스 앞에 .을 붙이면 정의된다.*/ 
+        .square{
+            width: 100px;
+            height: 100px;
+        }
+        /*아이디 선택자*/
+        #blueBox {
+            background-color: blue;
+            color: white;
+        }
+        #redBox {
+            background-color: red;
+        }
+    </style>
+    <div id="blueBox" class="square">Blue Box</div>
+    <br>
+    <div id="redBox" class="square">Red Box</div>
+-->
+    <!--
+    <style>
+        .red{
+            color: red;
+        }
+        .bg-yellow{
+            background-color: yellow;
+        }
+        .font-lg{
+            font-size: 20px;
+        }
+    </style>
+    <div>코드는 <span class="red">이해 하면서 따라해</span>야 합니다.
+    <br>
+    책을 읽는 사람 모두 <span class="font-lg bg-yellow">멋진 웹 사이트</span>를 만들수 있을 거예요. 
+    </div>
+-->
+    <!--
+    <style>
+        /*속성 선택자*/
+
+        /*속성 존재 여부 확인*/
+        /*href 속성이 존재하는가?*/
+        *[href]{
+            background-color: yellow;
+            color: black;
+        }
+         /*속성 일치 여부 확인*/
+        /*href 속성이 다음과 일치하는가?*/
+        a[href='https://www.naver.com']{
+            background-color: green;
+            color: white;
+        }
+        /*속성 일치 여부 확인*/
+        /*href 속성이 다음과 일치하는가?*/
+        a[href='https://www.google.com']{
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <a href="https://www.naver.com" target="_blank">네이버 접속</a>
+    <div href="">난 div 태그인데?</div>
+    <a href="https://www.google.com" >구글 접속</a>
+-->
+    
+    <!-- 가상 컨텐츠는 기존정의된 클래스가 아닌 나 자신에 상호작용에 의해 표시되는 클래스이다 예들 들어 버튼에 마우스 커서를 올렸을때 변하는 특징같은것 -->
+    <!--
+    <style>
+        .color-box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .color-box:hover{ 
+            /* hover 가상 클래스 을 사용할시 기존 클래스 뒤에 :hover값을 붙이면 사용자에 의해 동작하는 가상 클래스가 적용된다*/
+            background-color: blue;
+        }
+    </style>
+
+    <div class="color-box"> </div>
+-->
+    <!-- 
+    <style>
+        button:active{
+            /*요소인 버튼을 클릭하면 배경색이 바뀌는 것을 볼수 있습니다. 버튼과 같이 상호작용이 전제되어 있는 요소가 아닌 모든 요소에 active 가상 클래스를 적용할수 있습니다*/
+            background-color: aqua;
+        }
+    </style>
+    <button>아무 버튼</button>
+-->
+    <!--
+<style>
+    /*클래스 선택자 + 가상선택자*/
+    .click:active{
+        background-color: aqua;
+    }
+</style>
+<div class="click">다른 태그들도 될까요?</div>
+<span class="click">됩니다!</span>
+-->
+<!--
+    <style>
+        /*전체 선택자 + 가상 클래스*/
+        *:checked{
+            /*radio, checkbox에는 border가 적용되지 않아 대신 box-shadow 사용*/
+            box-shadow: 0px 0px 0px 4px red;
+        }
+    </style>
+    <div>
+        <input type="checkbox" id="chk">
+        <label for="chk">
+            체크 박스
+        </label>
+    </div>
+    <div>
+        <input type="radio" id="radA" name="rad"> 
+        <label for="radA">라디오버튼 A</label>
+        <input type="radio" id="radB" name="rad">
+        <label for="radB">라디오버튼 B</label> 
+    </div>
+    id에 radA값을 넣으면 for값에 id값 radA을 넣어야한다-->
+    <!--
+    <style>
+        
+        /*전체 선택자 + 가상 클래스*/
+        /* *[disabled]{*/
+        /*[]가 빠진 disable은 div속성을 적용시키진 못하지만 []넣으면 적용시킬수 있다*/
+        
+        *:disabled{
+            background-color: aqua;
+        }
+    </style>
+    <input disabled>
+    <div disabled>비활성 div 태그</div>
+-->
+    <!--
+    <style>
+        .box{
+            display: inline-block;
+            width: 100px; height: 100px;
+            background-color: red; color: white;
+            font-size: 16px; /*폰트 사이즈 재설정*/
+        }
+        *{
+            font-size: 0; /*폰트 사이즈 제거*/
+        }
+    </style>
+    <div class="box"></div>
+    <div class="box">두 번째</div>
+<!-- 인라인 블록은 텍스트의 시작점이 요소의 기준이 됩니다. 따라서 텍스트가 있는 요소와 없는 요소가 같이 붙어 있으면 큰 문제가 발생합니다 -->
+ <!--
+    <style>
+        .flex{
+            display: flex; border: solid 1px black; padding: 16px; background-color: white;
+        }
+        .flex > div{
+            background-color: white; color: black;
+            border: solid 1px black;
+        }
+    </style>
+    <div class="flex">
+        <div>플렉스</div>
+        <div>박스는</div>
+        <div>인라인 보다</div>
+        <div>좋다</div>
+    </div>
+<!-- 플렉스 박스는 자기 자식요소에게 강제적으로 정렬을 요구하며 자신이 정한 방향을 절대로 바꾸지 않습니다
+  따라서 개발자는 플렉스 박스를 사용하면 직관적으로 요소를 배치하고 정렬할수 있습니다 -->
+  <!--
+    <style>
+        .flex{
+            display: flex; border: solid 1px black; padding: 16px; background-color: aquamarine; margin-bottom: 16px;
+        }
+        .flex-end{
+            justify-content: flex-end;
+        }
+        .flex-center{
+            justify-content: center
+        }
+        .flex-start{
+            justify-content: flex-start;
+        }
+        .flex > div{
+            background-color: blueviolet; color: white;
+            border: solid 1px black;
+        }
+    </style>
+    <div class="flex flex-start">
+        <div>플렉스</div>
+        <div>스타트</div>
+    </div>
+    <div class="flex flex-end">
+        <div>플렉스</div>
+        <div>센터</div>
+    </div>
+    <div class="flex flex-center">
+        <div>플렉스</div>
+        <div>센터</div>
+    </div>
+<!-- justify-content 속성은 기본 축을 따라서 나열되어 있는 플렉스 아이템을 어떻게 정렬할지 설정합니다. -->
+ <!--
+    <style>
+        .flex{
+            display: flex;
+            border: solid 1px black;
+            padding: 16px;
+            background-color: aquamarine;
+            margin-bottom: 16px;
+        }
+        .flex-space-between{
+            justify-content: space-between;
+        }
+        .flex-space-around{
+            justify-content: space-around;
+        }
+        .flex-space-evenly{
+            justify-content: space-evenly;
+        }
+        .flex > div{
+            background-color: blueviolet; color: white; border: solid 1px black;
+        }
+    </style>
+    <div class="flex flex-space-between">
+        <div>최대한</div>
+        <div>떨어진</div>
+        <div>요소</div>
+    </div>
+    <div class="flex flex-space-around">
+        <div>요소 양옆</div>
+        <div>여백이</div>
+        <div>동일</div>
+    </div>
+    <div class="flex flex-space-evenly">
+        <div>사이</div>
+        <div>여백이</div>
+        <div>모두</div>
+        <div>동일</div>
+    </div>
+<!-- justify-content속성은 단순히 플렉스 아이템을 어느 쪽으로 모으는 것만 아니라 아이템 사이를 자동으로 어떻게 떨어뜨릴지도 설정할 수 있습니다 -->
+ <!--
+    <style>
+        .flex{
+            display: flex;
+            border: solid 1px black;
+            padding: 16px;
+            background-color: aquamarine;
+            height: 200px;
+            margin-bottom: 16px;
+        }
+        .flex-space-between{
+            justify-content: space-between;
+        }
+        .flex > div{
+            background-color: blueviolet; color: white; border: solid 1px black; height: 100px;
+        }
+    </style>
+        <div class="flex flex-space-between">
+            <div>최대한</div>
+            <div>떨어진</div>
+            <div>요소</div>
+        </div>
+        <!-- 플렉스 박스에 높이를 적용한다면 플렉스 아이템의 높이도 플렉스 박스만큼 늘어납니다 aline-items 속성의 기본값이 stretch라서 그럼 -->
+        <!--
+        <style>
+            .flex{
+            display: flex;
+            border: solid 1px black;
+            padding: 16px;
+            background-color: aquamarine;
+            height: 200px;
+            margin-bottom: 16px;
+        }
+        .flex-center{
+            justify-content: center;
+        }
+        .aline-items-start{
+            align-items: flex-start;
+        }
+        .aline-items-end{
+            align-items: flex-end;
+        }
+        .aline-items-center{
+            align-items: center;
+        }
+        .flex > div{
+            background-color: blueviolet; color: white; border: solid 1px black; height: 100px;
+        }
+        </style>
+        <div class="flex aline-items-start flex-center">
+            <div>교차축</div>
+            <div>시작</div>
+        </div>
+        <div class="flex aline-items-center flex-center">
+            <div>교차축</div>
+            <div>중심</div>
+        </div>
+        <div class="flex aline-items-end flex-end">
+            <div>교차축</div>
+            <div>끝</div>
+        </div>
+<!-- align-items 속성으로 교차 축을 설정하여 플렉스 아이템의 위치를 설정할 수 있습니다 기본 축의 위치 자체를 움직인다
+ 고 생각하시면 좋습니다 -->
+
+ <!--
+        <style>
+            /* 플렉스 박스는 플렉스 아이템을 가로로 밖에 정렬하지 못합니다 하지만 flex-direction 속성을
+            이용하면 가로 외의 방향으로 플렉스 아이템을 정렬할 수 있습니다 */
+        .flex{
+            display: flex;
+            border: solid 1px black;
+            padding: 16px;
+            background-color: aquamarine;
+            height: 400px;
+            margin-bottom: 16px;
+        }
+        .flex-space-between{
+            justify-content: space-between;
+        }
+        .aline-items-start{
+            align-items: flex-start;
+        }
+        .column{
+            flex-direction: column; /*기본 축을 세로로 변경*/
+        }
+        .flex > div{
+            background-color: blueviolet; color: white; border: solid 1px black; height: 100px;
+        }
+        </style>
+        <div class="flex aline-items-start flex-space-between column">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+        </div>
+    -->
+        <!--
+        <style>
+            /*flex-direction 속성은 기본 축의 가로세로뿐만 아니라 순서도 설정할수 있습니다*/
+            .flex{
+            display: flex;
+            border: solid 1px black;
+            padding: 16px;
+            background-color: aquamarine;
+            height: 400px;
+            margin-bottom: 16px;
+        }
+        .flex-space-between{
+            justify-content: space-between;
+        }
+        .aline-items-start{
+            align-items: flex-start;
+        }
+        .column-reverse{
+            flex-direction: column-reverse; /*기본 축 역방향(세로로 변경)*/
+        }
+        .row-reverse{
+            flex-direction: row-reverse; /*기본 축 역방향(가로로 변경)*/
+        }
+        .flex > div{
+            background-color: blueviolet; color: white; border: solid 1px black; height: 100px;
+        }
+
+        </style>
+        <div class="flex aline-items-start flex-space-between column-reverse">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+        </div>
+        <div class="flex aline-items-start flex-space-between row-reverse">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+        </div>
+    -->
+        <!--  
+        <style>
+            /*플렉스 아이템의 간격을 설정하고 싶으면 gap속성을 사용하면 된다 justify-content속성을 통한 방법은 축을 중심으로 하기 때문에 세세한 값을
+            설정 할 수 없어고 자동으로 간격이 추가됩니다*/
+        .flex{
+            display: flex;
+            border: solid 1px black;
+            padding: 16px;
+            background-color: aquamarine;
+            height: 400px;
+            margin-bottom: 16px;
+        }
+        .gap{
+            gap: 8px;
+        }
+        .flex > div{
+            background-color: blueviolet; color: white; border: solid 1px black; height: 100px;
+        }
+        </style>
+        <div class="flex gap">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+        </div>
+    -->
+        <!-- 
+        <style>
+              /*gap속서의 수치만큼 플렉스 아이템 사이에 간격을 추가했습니다 만약 이미 justify-content속성으로 플렉스 아이템 사이에
+              간격을 추가 했다면 gap속성은 무시됩니다*/
+        .flex{
+            display: flex;
+            border: solid 1px black;
+            padding: 16px;
+            background-color: aquamarine;
+            height: 400px;
+            margin-bottom: 16px;
+            justify-content: space-between;
+        }
+        .gap{
+            gap: 8px;
+        }
+        .flex > div{
+            background-color: blueviolet; color: white; border: solid 1px black; height: 100px;
+        }
+        </style>
+        <div class="flex gap">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+        </div>
+        </style>
+    -->
+        <!-- 
+        <style>
+            /*그리드는 플렉스와 다르게 한번에 가로와 세로 요소를 동시에 조정할수 있습니다*/
+            .grid{
+                display: grid;
+            }
+            .grid > div{
+                background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+            }
+        </style>
+        <div class="grid">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+            <div>네 번째</div>
+        </div>
+    -->
+        <!--
+    <style>
+        /*그리드의 열 개수의 기본값이 1개이기 때문에 한행에 하나의 요소만 올 수 있으므로 세로로 나열되는 것처럼 보입니다
+        그럴때 grid-template-column 속성으로 그리드의 열의 수와 폭을 고정할 수 있습니다*/
+        .grid{
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+        }
+        .grid > div{
+            background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+        }
+    </style>
+    <div class="grid">
+        <div>첫 번째</div>
+        <div>두 번째</div>
+        <div>세 번째</div>
+        <div>네 번째</div>
+    </div>
+-->
+    <!--  
+<style>
+    /*fr단위를 쓰면 기본적으로 남은 그리드의 공간을 가득 차지하려고 합니다 그래서 고정된 열과 함께 쓰면 나머지 폭을 모두 차지합니다*/
+    .grid{
+        display: grid;
+        grid-template-columns: 150px 2fr 1fr; /*만약 한 행에 fr단위를 갖는 열이 여러 개일 경우에는 앞쪽의 fr 값은 비율을 뜻합니다*/
+       /* grid-template-columns: 150px 1fr; 150px 1개 1fr 1개*/
+    }
+    .grid > div{
+        background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+    }
+</style>
+<div class="grid">
+    <div>첫 번째</div>
+    <div>두 번째는 폭이 세 번째의 2배!</div>
+    <div>세 번째</div>
+    <div>네 번째</div>
+</div>
+-->
+<!--
+    <style>
+        /*일일이 열의 정보를 적으면 열이 너무 많아졌을 때 적기도 힘들고 가독성도 떨어질수 있으므로 repeat 함수를 이용하여 반복하여 값을 추가할 수 있습니다*/
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) /*1fr로 3개*/
+        }
+        .grid > div{
+            background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+        }
+    </style>
+    <div class="grid">
+        <div>첫 번째</div>
+        <div>두 번째</div>
+        <div>세 번째</div>
+        <div>네 번째</div>
+        <div>다섯 번째</div>
+    </div>
+    </style>
+-->
+    <!-- 
+<style>
+    /*repeat 함수를 사용하더라도 고정된 열 수를 가질수 밖에 없습니다 하지만 열의 수가 정해져있는 상황에서 넓은 화면을 갖고있는
+    디바이스로 페이지를 확인하면 페이지가 비어보일수 있습니다 그러므로 알아서 많이 열이 채워지기 원하면 auto-fill을 사용하면 됩니다*/
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 150px) /*150px이 될 때까지 채움*/
+    }
+    .grid > div{
+        background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+    }
+</style>
+<div class="grid">
+    <div>첫 번째</div>
+    <div>두 번째</div>
+    <div>세 번째</div>
+    <div>네 번째</div>
+    <div>다섯 번째</div>
+</div>
+-->
+<!--  
+    <style>
+        /* 그리드도 기본축과 교차축이 있습니다 */
+.grid{
+        display: grid; width: 500px; background-color: azure; justify-content: center; /*그리드 아이템 기본 축 기준으로 정렬*/
+        grid-template-columns: 150px 150px /*150px 2개*/
+    }
+    .grid > div{
+        background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+    }
+</style>
+<div class="grid">
+    <div>첫 번째</div>
+    <div>두 번째</div>
+    <div>세 번째</div>
+    <div>네 번째</div>
+    <div>다섯 번째</div>
+</div>
+    </style>
+-->
+    <!-- 
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 150px 150px;
+            width: 500px;
+            height: 500px;
+            background-color: azure;
+            align-content: space-between; /*그리드 아이템 기본 축 기준 중심 정렬*/
+        }
+        .grid > div{
+            background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+        }
+    </style>
+        <div class="grid">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+            <div>네 번째</div>
+            <div>다섯 번째</div>
+        </div>
+    -->
+        <!-- 
+        <style>
+            /*플렉스 박스에서 사용했던 gap속성과 마찬가지로 그리드에서 각 그리드 아이템끼리의 간격을 위해 gap속성을 사용할 수 있습니다
+            방향이 세로인 플렉스와는 다르게 그리드는 방향이 가로세로 두곳입니다*/
+            .grid{
+            display: grid;
+            grid-template-columns: 150px 150px;
+            gap: 16px;
+        }
+        .grid > div{
+            background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+        }
+    </style>
+        <div class="grid">
+            <div>첫 번째</div>
+            <div>두 번째</div>
+            <div>세 번째</div>
+            <div>네 번째</div>
+            <div>다섯 번째</div>
+        </div>
+        </style>
+    -->
+        <!--
+        <style>
+            /*column-gap 속성과 row-gap 속성으로 행과 열 가가 별도로 간격을 설정할 수 있습니다*/
+             .grid{
+            display: grid;
+            grid-template-columns: 150px 150px;
+            column-gap: 16px; /*열 간격*/
+            row-gap: 8px; /*행 간격*/
+        }
+        .grid > div{
+            background-color: blueviolet; color: white; height: 100px; border: solid 1px black;
+        }
+        </style>
+    -->
+<!-- 
+    <style> /*relative 상대위치: relative값은 요소를 현재 위치에서 약간 옮길 때 사용합니다 현재위치에서 상대적으로 얼마나 이동할지를 정할 수 있습니다*/
+        .rel{
+            position: relative;
+            /*top: -40px; 위 기준으로 -40px 당겨짐*/
+            bottom: 40px;
+            /*left: 40px;왼쪽 기준으로 40px 밀림*/
+            right: -40px;
+        } /* left right top bottom 속성이 양수일때는 해당 방향으로 멀어지고 음수면 가까워집니다*/
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .a{
+            background-color: aquamarine;
+        }
+        .b{
+            background-color: bisque;
+        }
+    </style>
+    <div class="box a">정사각형 A</div>
+    <div class="box b rel">정사각형 B</div>
+-->
+    <!-- 
+    <style>
+        .abs{
+            position: absolute; /*absolute값은 요소를 절대 위치에 고정시킬 때 사용합니다 가령 요소를 웹페이지의 맨 아래 맨 위에 고정할수 있습니다*/
+            top: 0;
+            left: 0;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .long-box{
+            width: 100px;
+            height: 800px;
+        }
+        .a{
+            background-color: aquamarine;
+        }
+        .b{
+            background-color: bisque;
+        }
+    </style>
+    <div class="long-box a">직사각형 A</div>
+    <div class="box b abs">직사각형 B</div>
+-->
+    <!--
+<style>
+    .abs{
+        position: absolute; /*absolute값은 요소를 절대 위치에 고정시킬 때 사용합니다 가령 요소를 웹페이지의 맨 아래 맨 위에 고정할수 있습니다*/
+        top: 0;
+        right: 0;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+    }
+    .big-box{
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+    .a{
+        background-color: aquamarine;
+    }
+    .b{
+        background-color: bisque;
+    }
+</style>
+<div class="big-box a">
+<div class="box b abs">직사각형 B</div>
+</div>
+-->
+<!-- 
+    <style>
+        .fixed{ /*fixed값은 요소를 브라우저에 고정시킬 때 사용합니다 광고배너나 팝업 메뉴를 스크롤을 내려도 그자리에 그대로 유지되는 것*/
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .long-box{
+            width: 300px;
+            height: 800px;
+        }
+        .a{
+            background-image: linear-gradient(red, blue);
+        }
+        .b{
+            background-color: bisque;
+        }
+    </style>
+    <div class="long-box a">큰 사각형 A</div>
+    <div class="box b fixed">정사각형 B</div>
+-->
+    <!--
+    <style>
+        .popup{ /*fixed 태그는 굉장히 유용하므로 꼭 숙지하는것이 좋을거 같음*/
+            position: fixed;
+            top: 40%;
+            left: 40%;
+            width: 150px;
+            height: 200px;
+            background-color: white;
+            border: solid 1px lightgray;
+            overflow-y: auto;
+        }
+        .long-box{
+            width: 1000px;
+            height: 1000px;
+        }
+        .a{
+            background-image: linear-gradient(red, blue);
+        }
+    </style>
+    <div class="long-box a">큰 사각형 A</div>
+    <div class="popup">
+        <h3>작은 팝업</h3>
+        팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용팝업 내용ㅍ 팝업 내용 팝업 내용
+        팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용 팝업 내용
+    </div>
+-->
+    <!--  
+    <style> 
+        .layout{ /*광고나 배너가 내가 스크롤을 하면 따라오는 배너를 본적이 있을것이다 이것을 구현하는것이 sticky 속성값이다*/
+            display: flex;
+            gap: 16px;
+            max-width: 1024px;
+            margin: auto;
+        }
+        body{
+            background-color: rgb(248, 248, 248);
+        }
+        section{
+            width: 100%;
+            height: 1400px;
+            padding: 8px;
+            background-color: white;
+        }
+        aside{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .box{
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+            color: white;
+        }
+        .ads{
+            position: sticky;
+            top: 32px;
+            background-color: aquamarine;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <div class="layout">
+        <section>
+            본문 컨텐츠
+        </section>
+        <aside>
+            <div class="box">사이드바 박스</div>
+            <div class="ads">광고</div>
+        </aside>
+    </div>
+-->
+    <!--
+    <style>
+        .fixed-a{ /*z-index 속성을 활용하면 속성의 숫자가 크면 큰 요소가 작은요소를 덮은다*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            z-index: 9;
+        }
+        .fixed-b{
+            position: fixed;
+            left: 50px;
+            top: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            z-index: 1;
+        }
+    </style>
+    <div class="fixed-a">정사각형 A</div>
+    <div class="fixed-b">정사각형 B</div>
+-->
+    <!--
+    <style>
+        /*rotate 함수는 요소를 회전시킬 수 있습니다 .rotate 함수의 인자로는 얼마나 요소를 회전시킬지를 의미하는 회전 단위를 넣습니다*/
+        .container{
+            display: flex;
+            gap: 50px;
+            margin: 32px;
+        }
+        /*회전 각도*/
+        .rotate-deg{
+            transform: rotate(45deg);
+        }
+        /*회전 라디안*/
+        .rotate-rad{
+            transform: rotate(180rad);
+        }
+        .rotate-turn{
+            transform: rotate(-0.5turn);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .blue{
+            color: white;
+            background-color: blue;
+        }
+        .red{
+            color: white;
+            background-color: red;
+        }
+        .yellow{
+            color: black;
+            background-color: yellow;
+        }
+    </style>
+    <div class="container">
+        <div class="box rotate-deg blue">정사각형<br>(각도)</div>
+        <div class="box rotate-rad red">정사각형<br>(라디안)</div>
+        <div class="box rotate-turn yellow">정사각형<br>(회전 수)</div>
+    </div>
+-->
+    <!--  
+    <style>
+        .container{
+            display: flex;
+            gap: 50px;
+            margin: 32px;
+        }
+        /*회전 A*/
+        .rotate-a{
+            transform: rotateY(60deg) rotate(45deg);
+        }
+        /*회전 B*/
+        .rotate-b{
+            transform: rotateX(60deg) rotateZ(45deg);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .blue{
+            color: white;
+            background-color: blue;
+        }
+        .red{
+            color: white;
+            background-color: red;
+        }
+        .yellow{
+            color: black;
+            background-color: yellow;
+        }
+    </style>
+    <div class="container">
+        <div class="box rotate-a blue">정사각형<br>(각도)</div>
+        <div class="box rotate-b red">정사각형<br>(라디안)</div>
+       
+    </div>
+
+
+    </style>
+-->
+    <!-- 
+    <style> /*translate 함수는 요소를 이동시킬수 있습니다 position 속성의 relative 값과 매우 비슷합니다*/
+        .trans-a{
+            transform: translate(200px, 200px);
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+        }
+        .sm-box{
+            width: 100px;
+            height: 100px;
+            color: black;
+            background-color: yellow;
+        }
+        .flex{
+            display: flex;
+        }
+    </style>
+    <div class="flex">
+        <div class="trans-a">정사각형 A</div>
+        <div class="sm-box">왼쪽에 <br> 정사각형 A가 <br> 있습니다</div>
+    </div>
+    <div class="box">위에 정사각형 A가 <br> 있습니다</div>
+-->
+    <!--
+    <style>
+        .scale-a{
+            transform: scale(2) translate(50px, 50px); /*scale함수는 요쇠의 크기를 늘리거나 줄일 수 있습니다  
+            translate(a,b)의 괄호 안의 a는 x이며 증가할수록 왼쪽으로부터 멀어지고 b는 y이며 y가 증가할수록 상단으로부터 멀어집니다*/
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            z-index: 5;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+        }
+        .sm-box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            z-index: 9;
+        }
+        .flex{
+            display: flex;
+        }
+    </style>
+    <div class="flex">
+        <div class="scale-a">정사각형 A</div>
+        <div class="sm-box">왼쪽에 <br> 정사각형 A가 <br> 있습니다</div>
+    </div>
+    <div class="box">위에 정사각형 A가<br> 있습니다</div>
+-->
+    <!--
+    <style>
+        .hover-btn{
+            margin: 16px; /*겉 여백*/
+            width: 100px;
+            background-color: red;
+            color: white;
+            cursor: pointer;/*마우스 포인터*/
+            line-height: 300%;
+            text-align: center;
+            transition: background-color 0.5s; /*5초 동안 배경색만 전환*/
+        }
+        /*마우스를 올려놓을 경우*/
+        .hover-btn:hover{
+            transform: scale(1,2); /*마우스를 올려놓았을때 요소가 커지고*/
+            background-color: blue; /*배경색이 바뀜*/
+        }
+    </style>
+    <div class="hover-btn">버튼</div>
+-->
+    <!-- 
+<style>
+    .hover-btn{
+        margin: 16px; /*겉 여백*/
+        width: 100px;
+        background-color: red;
+        color: white;
+        cursor: pointer;/*마우스 포인터*/
+        line-height: 300%;
+        text-align: center;
+        transition: 0.5s; /*5초 동안 배경색만 전환
+        굳이 background-color속성에만 transition속성을 적용안해도 됨*/
+    }
+    /*마우스를 올려놓을 경우*/
+    .hover-btn:hover{
+        transform: scale(1,2); /*마우스를 올려놓았을때 요소가 커지고*/
+        background-color: blue; /*배경색이 바뀜*/
+    }
+</style>
+<div class="hover-btn">버튼</div>
+-->
+<!--
+    <style>
+        @keyframes zoom{
+            0%{ /*keyframes의 처음과 끝만 지정하면 전환 효과에 크게 다르지 않습니다*/
+                transform: scale(1); rotate:(0);
+            }
+            50%{
+                transform: scale(1.5); rotate: (90deg);
+            }
+            100%{
+                transform: scale(2); rotate: (0);
+            }
+        }
+        .ani-btn{
+            margin: 64px;
+            width: 200px;
+            text-align: center;
+            animation-name: zoom; /*@keyframes의 zoom, 이 상태로 코드를 실행하면 가만히 멈춰있는 상태일겁니다
+            애니메이션을 적용시키려면 애니메이션을 몇 초간 지속할지 등 애니메이션 재생에 대한 정보가 전혀 없기 때문입니다 그래서 animation-duration 지속시간 
+            값을 적용시켜야 합니다*/
+            animation-duration: 1s; /*1초간 진행 후 재생 전으로 돌아가서 멈춘다*/
+            /*animation-iteration-count: 2; /*animation-iteration-count 속성은 애니메이션을 몇번 반복해서 실행시켜주는지에 대한 속성입니다
+            animation을 무한히 반복하고 싶으면 infinite로 설정하면 됩니다*/
+           /* animation-direction: alternate; /*애니메이션이 한번 재생하고 난후 시작지점으로 즉시 바뀌는게 어색할수 있습니다 이러한것을 자연스럽게
+            설정하고 싶다면 animation-direction 속성으로 애니메이션이 끝난 후 역재생하게 만들어 자연스럽게 원래 상태로 돌아갈수 있습니다*/
+            animation-fill-mode: both; /*위 두속성을 제외했을때 애니메이션이 끝나면 시작지점으로 돌아갈때 뚝 끊기는 느낌이 나므로
+            fill-mode속성을 사용하여 애니메이션이 종료후에도 변화를 그대로 유지하도록 설정할수 있습니다*/
+        }
+    </style>
+    <div class="ani-btn">애니메이션</div>
+-->
+
+
+
+<!--
+<style>
+    @keyframes zoom{
+        0%{ /*keyframes의 처음과 끝만 지정하면 전환 효과에 크게 다르지 않습니다*/
+            transform: scale(1); rotate:(0);
+        }
+        50%{
+            transform: scale(1.5); rotate: (90deg);
+        }
+        100%{
+            transform: scale(2); rotate: (0);
+        }
+    }
+    .ani-btn{
+        margin: 64px;
+        width: 200px;
+        text-align: center;
+        animation-name: zoom; 
+        animation-duration: 4s; 
+        animation-delay: 2s; /*애니메이션을 일정시간후에 재생해야 할때도 있습니다 이럴땐 animation-delay속성을 사용해 재생하기전에 대기시간을 적용시킬수 있습니다*/ 
+        animation-timing-function: 0.68, 0.22, 0, 1.32; /*animation도 transition처럼 타이밍 함수를 적용할수 있습니다*/
+
+    }
+</style>
+<div class="ani-btn">애니메이션</div>
+-->
+<!-- 
+    <style>
+        /*기본형 PC*/
+        .responsive-bg{
+            background-color: red;
+        }
+        @media screen and (max-width: 300px) { /*@media 쿼리는 브라우저의 폭이 300px 이하일 때 적용됩니다*/
+            .responsive-bg{
+                background-color: yellow;
+            }
+        }
+        @media screen and (min-width: 400px) {
+            .responsive-bg{
+                background-color: blue;
+            }
+        }
+    </style>
+    <div class="responsive-bg">반응형 요소</div>
+-->
+    <!--
+<style>
+    /*기본형 PC*/
+    .responsive-bg{
+        background-color: red;
+    }
+    /*1024px 이하 (태블릿)*/
+    @media screen and (max-width: 1024px) { 
+        .responsive-bg{
+            background-color: yellow;
+        }
+    }
+    /*768px 이하 (휴대폰 가로, 소형 태블릿)*/
+    @media screen and (max-width: 768px) {
+        .responsive-bg{
+            background-color: purple;
+        }
+    }
+    /*480px 이하 (휴대폰 세로, 소형 태블릿)*/
+    @media screen and (max-width: 480px) {
+        .responsive-bg{
+            background-color: aqua;
+        }
+    }
+</style>
+<div class="responsive-bg">반응형 요소</div>
+-->
+<!-- 
+    <style>
+        *{ /*padding size를 width height에 포함시키기 위한 설정*/
+            box-sizing: border-box;
+        }
+        /*전체 레이아웃 설정*/
+        .layout{
+            display: flex;
+            margin: auto; /*중앙 정렬*/
+            max-width: 1024px; /*컨테이너 역할을 위한 max-width 정의*/
+        }
+        /*사이드 바*/
+        nav{
+            width: 100%;
+            max-width: 180px; /*pc 일때 사이드바 폭 제한*/
+        }
+        /*테두리 추가*/
+        .border{ 
+            border: solid 1px black    
+        }
+        /*타이틀 추가*/
+        header{
+            width: 100%;
+            height: 50px;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        /*내용 묶음*/
+        .content-wr{
+            display: grid;
+            grid-template-columns: 1fr 1fr; /*열을 2개*/
+            gap: 12px; /*거리 12px*/
+            padding: 12px; /*속 여백*/
+            width: 100%;
+            font-size: 32px;
+        }
+        /*내용 묶음 내의 article의 폭 높이 비율을 1대1 정사각형으로 설정*/
+        .content-wr article{
+            aspect-ratio: 1;
+        }
+        /* 768px 이하 (휴대폰 가로, 소형 태블릿)*/
+        @media screen and(max-width: 768px) {
+            .content-wr{
+                grid-template-columns: 1fr;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            /*메뉴를 세로로 쌓기 위한 flex-direction 설정*/
+            .layout{
+                flex-direction: column;
+                padding: 16px;
+            }
+            .content-wr{
+                margin-top: 16px;
+                padding: 0;
+            }
+            nav{
+                max-width: 100%;
+            }
+        }
+    </style>
+    <header class="border">
+        멋진 사이트 제목
+    </header>
+    <section class="layout border">
+        <nav class="border">
+            <ul>
+                <li>메뉴 1</li>
+                <li>메뉴 2</li>
+                <li>메뉴 3</li>
+            </ul>
+        </nav>
+        <section class="content-wr">
+            <article class="border">내용 A</article>
+            <article class="border">내용 B</article>
+            <article class="border">내용 C</article>
+            <article class="border">내용 D</article>
+        </section>
+    </section>
+-->
+
+</body>
+</html>
