@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!--
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">올때메로나</h2>
+    <script>
+        document.getElementById('hello').innerHTML='좆까 병신아';
+        // document:문서 (.):의 getElementById('hello'):Id hello인 html요소 가져와 innerHTML: 내부
+        // document.getElementById('???').???='???'; 빈칸에 내가 원하는 것을 적으면 다 바꿀수 있다 뒤 2개 빈칸은 외울수 없으니 무조건 구글검색이 필요 예: 마진을 바꾸고싶을때 구글에 기재가 되어있음
+        document.getElementById('hi').innerHTML='올때바밤바'; // '='는 대입이라는 뜻이다 또한 document.getElementById('hi')는 selector라고 불린다
+        document.getElementById('hi').style.fontSize='30px';
+        document.getElementById('hello').style.fontSize='30px';
+    </script>
+-->
+<!-- 만약 버튼을 클릭하여 <div>내용을 보여주거나 닫고싶으면 버튼태그의 onclick에 셀렉터를 작성하여 css의 display 설정을 바꿔주면 된다.
+    <div class="alert-box"  id="alert">Alert 박스 <button onclick="document.getElementById('alert').style.display = 'none';">닫기</button></div>
+    <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+-->
+    <!-- function 을 쓰면 긴 코드를 깔끔하게 한 단어로 축약 가능-->
+    <div class="alert-box" id="sex">ㅋㅋ 병신아 이걸 클릭하냐<button onclick="hyunk()">클릭</button></div>
+    <button onclick="jin()">버튼 ㅋ</button>
+
+    <script>
+        function jin(){
+            document.getElementById('sex').style.display='block';
+        }
+        function hyunk(){
+            document.getElementById('sex').style.display='none';
+        }
+        // jin();라는 코드를 쓸때마다 위에있는 긴 코드롤 불러옴
+        // function 을 쓰면 긴 코드를 깔끔하게 한 단어로 축약 가능 css의 class와 같음
+    </script>
+
+
+</body>
+</html>
