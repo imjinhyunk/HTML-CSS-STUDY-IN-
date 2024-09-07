@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    
+
+</head>
+<body>
+    <!--
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">올때메로나</h2>
+    <script>
+        document.getElementById('hello').innerHTML='좆까 병신아';
+        // document:문서 (.):의 getElementById('hello'):Id hello인 html요소 가져와 innerHTML: 내부
+        // document.getElementById('???').???='???'; 빈칸에 내가 원하는 것을 적으면 다 바꿀수 있다 뒤 2개 빈칸은 외울수 없으니 무조건 구글검색이 필요 예: 마진을 바꾸고싶을때 구글에 기재가 되어있음
+        document.getElementById('hi').innerHTML='올때바밤바'; // '='는 대입이라는 뜻이다 또한 document.getElementById('hi')는 selector라고 불린다
+        document.getElementById('hi').style.fontSize='30px';
+        document.getElementById('hello').style.fontSize='30px';
+    </script>
+-->
+<!-- 만약 버튼을 클릭하여 <div>내용을 보여주거나 닫고싶으면 버튼태그의 onclick에 셀렉터를 작성하여 css의 display 설정을 바꿔주면 된다.
+    <div class="alert-box"  id="alert">Alert 박스 <button onclick="document.getElementById('alert').style.display = 'none';">닫기</button></div>
+    <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+-->
+    <!-- function 을 쓰면 긴 코드를 깔끔하게 한 단어로 축약 가능-->
+     
+    <!--
+    <div class="alert-box" id="sex">ㅋㅋ 병신아 이걸 클릭하냐<button onclick="알림창닫기()">클릭</button></div>
+    <button onclick="알림창열기()">버튼 ㅋ</button>
+
+    <script>
+       function 알림창열기(구멍){
+            document.getElementById('sex').style.display=구멍;
+        }
+        알림창열기(123);  //<- 알림창열기() 실행하는데 구멍에 123 넣어서 실행ㄱ
+        알림창열기('안녕');
+        알림창열기('block');
+        
+        function 알림창닫기(){
+            document.getElementById('sex').style.display='none';
+        }
+        // jin();라는 코드를 쓸때마다 위에있는 긴 코드롤 불러옴
+        // function 을 쓰면 긴 코드를 깔끔하게 한 단어로 축약 가능 css의 class와 같음
+    </script>
+-->
+<!--
+    <div class="alert-box" id="sex">ㅋㅋ 병신아 이걸 클릭하냐<button onclick="알림창닫기('none');">클릭</button></div>
+    <button onclick="알림창열기('block');">버튼 ㅋ</button>
+
+    <script> //파라미터는 코드 양이 줄어듬
+        function 알림창열기(구멍){ //함수의 파라미터 (일명 구멍)
+            document.getElementById('sex').style.display=구멍;  //1. 함수에 구멍뚫어놓으면
+        }
+        알림창열기('block'); //이코드는 alert 보여줌
+        알림창열기('none'); //이코드는 alert 닫아줌
+        //알림창열기(123);  <- 알림창열기() 실행하는데 구멍에 123 넣어서 실행ㄱ
+
+        
+        /*
+        //예
+        function plus(구멍, 구멍1, 구멍2){ //구멍이 여러개 필요한경우 : 콤마로 구분 자유작명
+            2 + 구멍
+        }
+
+        plus(1); //plus() 실행하는데 구멍에 2 넣어서 실행해주셈
+        plus(2);
+        plus(3);
+        //파라미터의 장점: 함수하나로 다양한 기능 실행가능.
+        */
+    </script>
+-->
+    <!-- <div class="alert-box" id="alert">
+        <p id="title">alert-box</p>
+        <button onclick="알림창열기()"> X </button>
+    </div>
+    <button onclick="알림창1열기('아이디 입력해라');"> 버튼1 </button>
+    <button onclick="알림창1열기('비밀번호 입력해라');">버튼2</button>
+    <script>
+        function 알림창1열기(파라미터){
+            document.getElementById('alert').style.display='block'
+            document.getElementById('title').innerHTML=파라미터
+        }
+        function 알림창열기(){
+            document.getElementById('alert').style.display='none';
+        }
+    </script> -->
+
+   <!-- <button onclick="알림창1열기('아이디 입력해라');"> 버튼1 </button>  버튼태그 안에 온클릭 요소가 지저분할수
+    있으므로 이벤트 리스너를 통해 온클릭 요소를 안쓰고도 js를 사용하여 해당 기능을 사용할수 있다-->
+    <!--
+    <div class="alert-box" id="alert">
+        <p id="title">alert-box</p>
+        <button id="close"> X </button>
+    </div>
+    <button id="open1"> 버튼1 </button>
+    <button id="open2">버튼2</button>
+    <script>
+        document.getElementById('open1').addEventListener('click', function(){
+            document.getElementById('alert').style.display='block';
+            document.getElementById('title').innerHTML="아이디 입력해라"
+        })
+        document.getElementById('open2').addEventListener('click', function(){
+            document.getElementById('alert').style.display='block';
+            document.getElementById('title').innerHTML="비밀번호를 입력해라";
+        })
+        
+        // 이번트 리스너 해석법 밑에 getElementbyId('close')요소가 옆 'click'이 되면 밑 공간 function(){  }을 실행해 주세요
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display='none';
+        });
+    </script>
+-->
+<!-- j쿼리 를 따온거임 쿼리파일은 바디태그 안에 넣는게 좋다 -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+  <h4 id="test" class="test1">안녕하세요</h4>
+  <script>
+    // $('#test'), $('.test1') = document.getElementById('test').innerHTML='', document.getElementsByClassName('test1')[0].innerHTML=''과 같은 것이다 jquery를 이용해 단순화 시킨것일뿐
+    // $('#test').html('안녕'); html의 요소를 바꿀수 있음
+    // $('#test').css('color','red');css의 속성 요소를 바꿀수 있음
+    // $('#test').attr('src','asdasdf'); src href과 같은 속성을 사용할수 있음
+  </script> -->
+
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+  <h4 id="test">안녕하세요</h4>
+  <button id="btn">클릭</button>
+  
+    <script>
+        $('#test').addClass('yellow-bg')
+    </script> -->
+  
+    <!-- <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand">Navbar</span>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav> 
+
+      <ul class="list-group" id="test1">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+
+querySelector()은 ()안에 css셀렉터를 그냥 넣으면 된다
+      <script>
+        // document.querySelector('#test1')
+        document.querySelectorAll('.list-group-item')[0];
+        document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function(){
+            document.getElementsByClassName('list-group')[0].classList.toggle('show')
+        });
+      </script> -->
+
+
+      <!-- <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand">Navbar</span>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <ul class="list-group" id="test1">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+
+      <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function(){
+            document.querySelectorAll('.list-group')[0].classList.toggle('show')
+        });
+      </script> -->
+
+      <!-- <p class="hello">안녕</p>
+      <p class="hello">안녕</p>
+      <p class="hello">안녕</p>
+      <button id="test-btn">버튼</button>
+
+     <script>
+        // document.querySelector('.hello').innerHTML = '바보';
+        $('.hello').html('바보'); 
+        $('#test-btn').on('click', function(){
+            $('.hello').slideUp()
+            $('.hello').fadeOut()
+        })
+     </script> -->
+
+     <button id="login">열기</button>
+     <div class="black-bg">
+        <div class="white-bg">
+          <h4 id="modal">로그인하세요</h4>
+          <input type="email">
+          <button class="btn btn-danger" id="close">닫기</button>
+        </div>
+      </div>
+
+      <script
+src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+      <script>
+        $('#login').on('click', function(){
+            $('#modal').show()
+        })
+        $('#close').on('click', function(){
+            $('#modal').hide()
+        })
+      </script>
+
+</body>
+</html>
