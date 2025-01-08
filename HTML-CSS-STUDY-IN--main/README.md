@@ -1,1 +1,0 @@
-# web developer study project
