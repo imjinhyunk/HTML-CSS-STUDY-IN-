@@ -1,0 +1,8 @@
+.alert-box{
+    /* UI 만드는 법: 1.미리 디자인 해놓고 숨김, 2. 버튼누르거나 하면 보여줌 */
+    background-color: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    display: none;
+}
