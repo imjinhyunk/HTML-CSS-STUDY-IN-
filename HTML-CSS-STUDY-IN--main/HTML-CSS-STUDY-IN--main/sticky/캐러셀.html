@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+</head>
+<body>
+    <div style="overflow: hidden">
+        <div class="slide-container">
+          <div class="slide-box" >
+            <img src="car1.png" draggable="false">
+          </div>
+          <div class="slide-box">
+            <img src="car2.png" draggable="false">
+          </div>
+          <div class="slide-box">
+            <img src="car3.png" draggable="false">
+          </div>
+        </div>
+     </div>
+     <!-- 터치와 클릭을 편하게 개발하고싶다면 Hammers.js를 활용하면 쉽게 개발가능 -->
+     <script>
+        var 시작좌표 = 0;
+        var 눌렀냐 = false;
+
+       
+        $('.slide-box').eq(0).on('mousedown', function(e){
+           시작좌표 = e.clientX
+           눌렀냐 = true;
+        });
+      
+        $('.slide-box').eq(0).on('mousemove', function(e){
+            if(눌렀냐 == true){
+           $('.slide-container').css('transform',
+           `translate(${e.clientX - 시작좌표}px)`)
+           console.log(e.clientX - 시작좌표)
+            }
+        });
+        $('.slide-box').eq(0).on('mouseup', function(e){
+            var 땐좌표 = e.clientX - 시작좌표
+            눌렀냐 = false;
+         
+            if(땐좌표 < -100){
+                $('.slide-container')
+                .css('transform', 'translateX(-100vw)'); // 두 번째 이미지로 이동
+            }
+            else{
+                $('.slide-container')
+                .css('transform', 'translateX(0vw)'); // 첫 번째 이미지로 이동
+            }
+          });
+       
+
+            $('.slide-box').eq(0).on('touchstart', function(e){
+           시작좌표 = e.touches[0].clientX
+           눌렀냐 = true;
+        });
+
+        $('.slide-box').eq(0).on('touchmove', function(e){
+            if(눌렀냐 == true){
+           $('.slide-container').css('transform',
+           `translate(${e.touches[0].clientX - 시작좌표}px)`)
+            }
+        });
+        $('.slide-box').eq(0).on('touchend', function(e){
+            var 땐좌표 = e.changedTouches[0].clientX - 시작좌표
+            눌렀냐 = false;
+            console.log(땐좌표)
+            if(땐좌표 < -100){
+                $('.slide-container')
+                .css('transform', 'translateX(-100vw)'); // 두 번째 이미지로 이동
+         }
+            else{
+                $('.slide-container')
+                .css('transform', 'translateX(0vw)'); // 첫 번째 이미지로 이동
+            }
+            setTimeout(() =>{
+            $('.slide-container').css('transition', 'none')
+            },500)
+          });
+
+
+          $('.slide-box').eq(1).on('mousedown', function(e){
+           시작좌표 = e.clientX
+           눌렀냐 = true;
+        });
+      
+        $('.slide-box').eq(1).on('mousemove', function(e){
+            if(눌렀냐 == true){
+           $('.slide-container').css('transform',
+           `translate(${e.clientX - 시작좌표}px)`)
+           console.log(e.clientX - 시작좌표)
+            }
+        });
+        $('.slide-box').eq(1).on('mouseup', function(e){
+            var 땐좌표 = e.clientX - 시작좌표
+            눌렀냐 = false;
+         
+            if(땐좌표 < -100){
+                $('.slide-container')
+                .css('transform', 'translateX(-200vw)'); //세번째 이미지로 이동
+            }
+            else if(땐좌표 > -100){
+              $('.slide-container')
+                .css('transform', 'translateX(0)'); //2번째 이미지로 다시 돌아옴
+            }
+          });
+
+
+      
+     </script>
+
+
+
+
+
+
+
+</body>
+</html>
